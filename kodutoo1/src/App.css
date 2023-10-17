@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+  }
+
+  .pilt{
+    width: 100px; 
+  }
+
+  .pilt:hover{
+    opacity: 0.7;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+.nupu-stiil {
+  background-color: green;
+  color: lightgray; /* Teksti värv helehalliks */
+  border: 10px;
+  padding: 10px 20px; /* Määrake nupu suurus */
+  border-radius: 5px; /* Nupu nurga ümardamine */
+  cursor: pointer;
+
+}
+
+.nupu-stiil:active{
+  text-decoration: underline;
+}
+
+.nupu-stiil:hover{
+  background-color: darkgreen;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* nupu-stiil-2 */
+
+.nupu-stiil-2 {
+  background-color: beige;
+  color: blue; /* Teksti värv helehalliks */
+  border: 10px;
+  padding: 10px 20px; /* Määrake nupu suurus */
+  border-radius: 5px; /* Nupu nurga ümardamine */
+  cursor: pointer;
+}
+
+.nupu-stiil-2:hover {
+  background-color: wheat;
+  height: 50px;
+  cursor: pointer;
+  font-size: 24px;
+  font-style: italic;
+}
+
+.nupu-stiil-3 {
+  color: green;
+  height: 30px;
+  font-weight: bold;
+  border-color: red;
+  
+}
+
+.nupu-stiil-3:hover {
+ cursor: pointer;
+border-color:burlywood;
+}
+ 

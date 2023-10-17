@@ -18,7 +18,7 @@
 }
 
 .nupu-stiil:active{
-  text-decoration: underline;
+  text-decoration: underline dotted;
   
 }
 
@@ -31,6 +31,7 @@
 .pilt:hover{
   opacity: 0.7;
   cursor: pointer;
+  
 }
 
 .pilt:active{
