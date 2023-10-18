@@ -16,7 +16,7 @@
   background-color: green;
   color: lightgray; /* Teksti värv helehalliks */
   border: 10px;
-  padding: 10px 20px; /* Määrake nupu suurus */
+  padding: 10px 20px; /* Määrab nupu suuruse */
   border-radius: 5px; /* Nupu nurga ümardamine */
   cursor: pointer;
 
@@ -36,10 +36,10 @@
 
 .nupu-stiil-2 {
   background-color: beige;
-  color: blue; /* Teksti värv helehalliks */
+  color: blue; 
   border: 10px;
-  padding: 10px 20px; /* Määrake nupu suurus */
-  border-radius: 5px; /* Nupu nurga ümardamine */
+  padding: 10px 20px; 
+  border-radius: 5px; 
   cursor: pointer;
 }
 
@@ -47,7 +47,7 @@
   background-color: wheat;
   height: 50px;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 12px;
   font-style: italic;
 }
 
