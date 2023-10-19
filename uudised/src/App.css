@@ -1,6 +1,26 @@
 
-
-
+.App {
+    text-align: center;
+    
+  }
+ 
+  .pilt {
+    width: 300px;
+    height:100px; 
+  
+  }
+  
+  .pilt:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    
+  }
+  
+  .pilt:active{
+    border-radius: 10px;
+    
+  }
+  
 
 
 
