@@ -11,10 +11,11 @@ function App() {
   return (
 
     <div className="App">
+      
 
       <Link to="/">
       <button>Avaleht</button>
-      {/* <img className="pilt" src="https://cdn.tasteatlas.com/images/regions/9b6037559326448ea3551c187a13f202.jpg?m=facebook" alt="" /> */}
+  {/* { <img className="pilt" src="https://cdn.tasteatlas.com/images/regions/9b6037559326448ea3551c187a13f202.jpg?m=facebook" alt="" /> } */}
       </Link>
       
       <Link to="/Uudised">

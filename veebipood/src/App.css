@@ -1,7 +1,7 @@
-.App {
+/* .App {
   text-align: center;
   
-}
+} */
 /*originaal kujundus*/
 
 .nupu-stiil{
@@ -39,3 +39,19 @@
   
 }
 
+.kuldne{
+  color: goldenrod;
+}
+
+.tume {
+  background-color: black;
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.hele{
+  background-color: white;
+  text-align: center;
+  min-height: 100vh;
+}
