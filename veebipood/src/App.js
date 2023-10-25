@@ -6,16 +6,30 @@ import LisaToode from './pages/LisaToode';
 import Ostukorv from './pages/Ostukorv';
 import MitteLeitud from './pages/MitteLeitud';
 import { useState } from 'react';
+import Poed from './pages/Poed';
+import Seaded from './pages/Seaded';
+import Hinnad from './pages/Hinnad';
+import Tooted from './pages/Tooted';
 
 
 function App() {
-  const [stiil, uuendaStiil] = useState("tume");
+  const [stiil, uuendaStiil] = useState(localStorage.getItem("stiil")||"hele" );
+
+  const stiilTumedaks = () => {
+    uuendaStiil ("tume")
+    localStorage.setItem("stiil", "tume");
+  }
+
+  const stiilHeledaks = () => {
+    uuendaStiil ("hele")
+    localStorage.setItem("stiil", "hele");
+  }
 
 
   return (
     <div className={stiil}>
-      <button onClick={() => uuendaStiil ("tume")}>Tumedaks</button>
-      <button onClick={() => uuendaStiil ("hele")}>Heledaks</button>
+      <button onClick={stiilTumedaks}>Tumedaks</button>
+      <button onClick={stiilHeledaks}>Heledaks</button>
     
 
 
@@ -30,13 +44,32 @@ function App() {
       <Link to="/lisa">
         <button className='nupu-stiil'>Lisa toode</button>
       </Link>
+
+      <Link to="/seaded">
+        <button className='nupu-stiil'>Seaded</button>
+      </Link>
+
+      <Link to="/poed">
+        <button className='nupu-stiil'>Poed</button>
+      </Link>
+
+      <Link to="/hinnad">
+        <button className='nupu-stiil'>Hinnad</button>
+      </Link>
+
+      <Link to="/tooted">
+        <button className='nupu-stiil'>Tooted</button>
+      </Link>
       
      
       <Routes>
-      <Route path="npm start"
-       element={ <Avaleht /> } />
+      <Route path=""element={ <Avaleht /> } />
       <Route path='ostukorv' element={ <Ostukorv /> } />
       <Route path='lisa' element={ <LisaToode />} />
+      <Route path='poed' element={ <Poed />} />
+      <Route path='seaded' element={ <Seaded />} />
+      <Route path='hinnad' element={ <Hinnad />} />
+      <Route path='tooted' element={ <Tooted />} />
       <Route path='*' element={ <MitteLeitud />} />
       </Routes>
   

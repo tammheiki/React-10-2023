@@ -33,13 +33,16 @@ function Avaleht() {
 
   //vasakpoolne sõna(muutuja) läheb htmli loogeliste sulgude sisse
   //parempoolne sõna(funktsiooni) abil uuendatakse vasakpoolset ja HTMLi korraga
-const [kogus, muudaKogus] = useState(8);
+
+  
+const [kogus, muudaKogus] = useState(localStorage.getItem("kogus") || 0 );
 const [laigitud, uuendaLaigitud] = useState(false);
 const [ sonum, m22raSonum] = useState("muuda kogust!");
 
 function nulli () {
     m22raSonum("Nullitud!");
-    muudaKogus (kogus + 1);
+    muudaKogus (0);
+    localStorage.setItem("kogus", 0 );
 }
 
 
@@ -47,6 +50,7 @@ function nulli () {
 function vahenda () {
     m22raSonum("Vähendatud!");
     muudaKogus (kogus - 1);
+    localStorage.setItem("kogus", kogus - 1);
 }
 
 
@@ -62,15 +66,15 @@ function suurenda () {
        {laigitud === true && kogus < 10 && <img src='/laigitud.svg' alt='' onClick={()=> m22raSonum("Punane süda - vähem kui 10") } />}
        {laigitud === false && <img src='/mittelaigitud.svg' alt=''onClick={()=> m22raSonum("Roheline süda - rohkem kui 10") } />}
        {laigitud === true && kogus > 10 && <img src='/legendaarne.svg' alt=''onClick={()=> m22raSonum("Kollane süda - rohkem kui 10") } />}
-        <button onClick={() => uuendaLaigitud (!laigitud)}>Muuda laigitut</button>
-        {/* {kogus > 0 && <button onClick={() => muudaKogus(0)}>Nulli-</button>} */}
-            
-        <button disabled={kogus ===0} onClick={() => nulli(0)}>Nulli</button>
-         <br />
-        {kogus > 0 && <button onClick={() => muudaKogus(kogus - 1)}>-</button>}
+       <button onClick={() => uuendaLaigitud (!laigitud)}>Muuda laigitut</button>
+       {/* {kogus > 0 && <button onClick={() => muudaKogus(0)}>Nulli-</button>} */}
+       <br />
+       <br />   
+       <button disabled={kogus === 0} onClick={() => nulli(0)}>Nulli</button>
+       <br />
+        {/* {kogus > 0 && <button onClick={() => muudaKogus(kogus - 1)}>-</button>} */}
         <br />
         <button disabled={kogus ===0} onClick={() => vahenda()}>-</button>
-
         <span className={kogus >=10 ? "kuldne" : undefined } > Kokku: {kogus} tk</span>
         <button onClick={() => suurenda()}>+</button>
         
