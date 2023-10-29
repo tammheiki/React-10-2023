@@ -12,6 +12,8 @@ function Hinnad() {
   const vastus = hinnad.filter (hind => hind > 30);
     uuendaHinnad(vastus);
   }
+
+  
   
 
   return (

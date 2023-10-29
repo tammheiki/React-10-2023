@@ -44,7 +44,7 @@
 }
 
 .tume {
-  background-color: black;
+  background-color: rgb(140, 218, 225);
   color: white;
   text-align: center;
   min-height: 100vh;
@@ -54,4 +54,8 @@
   background-color: white;
   text-align: center;
   min-height: 100vh;
+}
+
+.aktiivne {
+  color: lightblue;
 }

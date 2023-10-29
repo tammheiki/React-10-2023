@@ -57,6 +57,7 @@ function vahenda () {
 function suurenda () {
     m22raSonum("Suurendatud!");
     muudaKogus (kogus + 1);
+    localStorage.setItem("kogus", kogus + 1);
 }
 
   return (
