@@ -9,6 +9,8 @@ import { useRef } from 'react';
 import Leht from './pages/Leht';
 import Loader from './pages/Loader';
 import Books from './pages/Books';
+import Riigid from './pages/Riigid';
+import Autod from './pages/Autod';
 
 
 
@@ -76,6 +78,14 @@ function App() {
       <Link to="books">
         <button>Books</button>
       </Link>
+
+      <Link to="riigid">
+        <button>Riigid</button>
+      </Link>
+
+      <Link to="autod">
+        <button>Autod</button>
+      </Link>
       
       <Routes>
         <Route path='' element={<Avaleht />} />
@@ -85,6 +95,8 @@ function App() {
         <Route path='leht' element={<Leht />} />
         <Route path='loader' element={<Loader />} />
         <Route path='books' element={<Books />} />
+        <Route path='riigid' element={<Riigid />} />
+        <Route path='autod' element={<Autod />} />
 
       </Routes>
      
