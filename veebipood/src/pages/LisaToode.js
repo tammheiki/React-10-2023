@@ -1,15 +1,14 @@
 import React, { useRef, useState } from 'react'
+import tootedFailist from "../data/tooted.json"
 
 function LisaToode() {
 const[sonum, uuendaSonum] = useState("Lisa toode!");
 const inputiLuger = useRef();
 
-// function lisa() {
-//   uuendaSonum("Toode lisatud:" + inputiLuger.current.value);
-// }
 
 const lisa = () => {
   uuendaSonum("Toode lisatud:" + inputiLuger.current.value);
+  tootedFailist.push(inputiLuger.current.value);
 }
 
   return (

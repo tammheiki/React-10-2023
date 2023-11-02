@@ -1,8 +1,4 @@
-/* .App {
-  text-align: center;
-  
-} */
-/*originaal kujundus*/
+
 
 .nupu-stiil{
   color: rgba(255, 0, 0, 0.207);
@@ -59,3 +55,33 @@
 .aktiivne {
   color: lightblue;
 }
+
+.poed{
+  text-align: left;
+  color: aquamarine;
+}
+
+
+.button-container {
+  text-align: left; 
+  display: flex; 
+  flex-direction: initial; 
+}
+
+.sort-button {
+  background-color: #4CAF50; 
+  color: white; 
+  padding: 2px 2px; 
+  display: inline-block; 
+  font-size: 5px; 
+  margin: 2px 2px;
+  cursor: pointer;
+ 
+}
+
+.sort-button:hover {
+  background-color: #45A049; 
+}
+
+
+

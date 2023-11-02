@@ -13,6 +13,16 @@ function Hinnad() {
     uuendaHinnad(vastus);
   }
 
+  const lisaHind = () => {
+    hinnad.push(1234)
+    uuendaHinnad(hinnad.slice ());
+  }
+
+  const kustuta = (jrknr) => {
+    hinnad.splice(jrknr, 1)
+    uuendaHinnad(hinnad.slice());
+  }
+
   
   
 
@@ -21,7 +31,12 @@ function Hinnad() {
 
       <button onClick={sorteeriKasvavalt}>Sorteeri kasvavalt</button>
       <button onClick={filtreeriSuuremadKui30}>Jäta alles suuremad kui 30</button>
-      {hinnad.map(hind => <div> {hind} </div>)}
+      <button onClick={lisaHind} >lisa</button>
+      {hinnad.map((hind, jrknr) => 
+      <div key={jrknr}>{hind} 
+      < button onClick={() => kustuta(jrknr) }>x</button>
+      </div>)} 
+      
 
 
         

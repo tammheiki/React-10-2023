@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import poedFailist from "../data/poed.json"
 
 function Poed() {
+
+
   const [poed, muudaPoed] = useState(poedFailist);
+  const poodViide = useRef();
 
 
   const originaali = () => {
-    muudaPoed(poedFailist)
+    muudaPoed(poedFailist.slice())
 
   }
 
@@ -75,26 +78,51 @@ function Poed() {
     muudaPoed(vastus);
   }
 
+  const lisa = () => {
+  poedFailist.push(poodViide.current.value)
+  muudaPoed(poedFailist.slice());
 
-  
+  }
+
+  const kustuta = (jrknr) => {
+    poed.splice(jrknr,1)
+    muudaPoed(poed.slice())
+       
+  }
+
+
+
   return (
     <div>
-      <button onClick={originaali}>Tagasi originaali</button> <br />
-      <button onClick={sorteeriAZ}>Sorteeri A-Z</button> 
-      <button onClick={sorteeriZA}>Sorteeri Z-A</button>
-      <button onClick={sorteeriSonadeArvuJargi}>Sorteeri sõna arvu järgi</button>
-      <button onClick={sorteeriTahedKasvavalt}>Sorteeri tähe arv kasvavalt</button>
-      <button onClick={sorteeriTahedKahanevalt}>Sorteeri kahanevalt</button>
-      <button onClick={sorteeriKolmandaTaheJargi}>kolmanda tähe jargi</button>
-      <br /><br />
-      <button onClick={filtreeriEgaLoppevad}>filtreeri e-ga lõppevad</button>
-      <button onClick={filtreeriKesSisaldabIsLyhendit}>Filtreeri 'is' lühend</button>
-      <button onClick={filtreeriKellelOn9Tahte}>9 tähte</button>
-      <button onClick={filtreeriKellelOnVahemalt7Tahte}>Filtreeri vähemalt 7 tähte</button>
-      <button onClick={filtreeriKellelOnKolmasTahtI}>Filtreeri kolmas täht i</button>
-      <button onClick={filtreeriKellelOnRohkemKui1Sona}>Filtreeri rohkem kui 1 täht</button>
-      
-      {poed.map(yksPood => <div className='pood'> {yksPood} </div> )}
+
+    <label> Pood </label> <br />
+    <input ref={poodViide} type="text" /> <br />
+
+    <div className="button-container">
+
+
+      <button onClick={lisa}className='sort-button'>Lisa</button>
+      <button onClick={originaali} className='sort-button' >Tagasi originaali</button> 
+      <button onClick={sorteeriAZ} className='sort-button' >Sorteeri A-Z</button> 
+      <button onClick={sorteeriZA} className='sort-button'>Sorteeri Z-A</button>
+      <button onClick={sorteeriSonadeArvuJargi}className='sort-button'>Sorteeri sõna arvu järgi</button>
+      <button onClick={sorteeriTahedKasvavalt}className='sort-button'>Sorteeri tähe arv kasvavalt</button>
+      <button onClick={sorteeriTahedKahanevalt}className='sort-button'>Sorteeri kahanevalt</button>
+      <button onClick={sorteeriKolmandaTaheJargi}className='sort-button'>Kolmanda tähe jargi</button>
+      <button onClick={filtreeriEgaLoppevad}className='sort-button'>Filtreeri E-ga lõppevad</button>
+      <button onClick={filtreeriKesSisaldabIsLyhendit}className='sort-button'>Filtreeri 'is' lühend</button>
+      <button onClick={filtreeriKellelOn9Tahte}className='sort-button'>Filtreeri vähemlat kus on 9 tähte</button>
+      <button onClick={filtreeriKellelOnVahemalt7Tahte}className='sort-button'>Filtreeri vähemalt kus on 7 tähte</button>
+      <button onClick={filtreeriKellelOnKolmasTahtI}className='sort-button'>Filtreeri kolmas täht "i"</button>
+      <button onClick={filtreeriKellelOnRohkemKui1Sona}className='sort-button'>Filtreeri rohkem kui kus on 1 täht</button>
+
+      </div>
+
+      {poed.map((yksPood,index) => 
+      <div key={yksPood} className='pood'> 
+      {yksPood} 
+      <button onClick={() => kustuta(index) }>x</button>
+      </div> )}
     </div>
   )
 }

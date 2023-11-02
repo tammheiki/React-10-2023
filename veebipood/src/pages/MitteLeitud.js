@@ -9,11 +9,6 @@ function MitteLeitud() {
         <Link to="/">
             <button>Tagasi avalehele</button>
         </Link>
-
-
-
-
-
     </div>
   )
 }
