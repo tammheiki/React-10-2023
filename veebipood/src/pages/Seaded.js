@@ -22,9 +22,9 @@ function Seaded() {
 
   return (
     <div>
-      {keel === "ee" && <div>Leht on eesti keelne</div>}
+      {keel === "ee" && <div>Leht on Eesti keelne</div>}
       {keel === "en" &&  <div>Page is in English</div>}
-      {keel === "es" &&  <div>La pagina esta en español</div>}
+      {keel === "es" &&  <div>La pagina esta en Español</div>}
       <button className= {keel === "ee" ? "aktiivne" : undefined }  onClick={uuendaKeelEE}>Estonian</button>
       <button className= {keel === "en" ? "aktiivne" : undefined }  onClick={uuendaKeelEN}>English</button>
       <button className= {keel === "es" ? "aktiivne" : undefined }  onClick={uuendaKeelES}>Spanish</button>

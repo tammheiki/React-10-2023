@@ -69,18 +69,22 @@
 }
 
 .sort-button {
-  background-color: #4CAF50; 
-  color: white; 
+  background-color: #5abaa4; 
+  color: rgb(0, 0, 0); 
   padding: 2px 2px; 
   display: inline-block; 
   font-size: 5px; 
   margin: 2px 2px;
   cursor: pointer;
+  font-weight: bold;
+  
  
 }
 
 .sort-button:hover {
-  background-color: #45A049; 
+  background-color: rgb(69, 160, 152); 
+  opacity: 0.7;
+  border-radius: 10px;
 }
 
 

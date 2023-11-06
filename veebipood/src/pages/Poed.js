@@ -1,10 +1,11 @@
 import React, { useRef, useState } from 'react'
 import poedFailist from "../data/poed.json"
+import { Link } from 'react-router-dom';
 
 function Poed() {
 
 
-  const [poed, muudaPoed] = useState(poedFailist);
+  const [poed, muudaPoed] = useState(poedFailist.slice());
   const poodViide = useRef();
 
 
@@ -53,7 +54,7 @@ function Poed() {
   }
 
   const sorteeriSonadeArvuJargi = () => {
-    poed.sort((a,b) => a.split(" ").lenght - b.split(" ").lenght ); 
+    poed.sort((a,b) => a.split(" ").lenght - b.split(" ").length ); 
     muudaPoed(poed.slice());
   }
     
@@ -84,11 +85,11 @@ function Poed() {
 
   }
 
-  const kustuta = (jrknr) => {
-    poed.splice(jrknr,1)
-    muudaPoed(poed.slice())
+  // const kustuta = (jrknr) => {
+  //   poed.splice(jrknr,1)
+  //   muudaPoed(poed.slice())
        
-  }
+  // }
 
 
 
@@ -121,7 +122,11 @@ function Poed() {
       {poed.map((yksPood,index) => 
       <div key={yksPood} className='pood'> 
       {yksPood} 
-      <button onClick={() => kustuta(index) }>x</button>
+      
+      <Link to={"/yksik-pood/" + index}>
+        <button>Vaata detailsemalt</button>
+      </Link>
+
       </div> )}
     </div>
   )

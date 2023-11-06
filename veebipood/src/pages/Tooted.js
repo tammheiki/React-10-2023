@@ -1,6 +1,9 @@
 import React from 'react'
 import ostukorvFailist from "../data/ostukorv.json";
 import tootedFailist from "../data/tooted.json";
+import{Link} from "react-router-dom"
+
+
 
 function Tooted() {
   const tooted =  tootedFailist;
@@ -13,11 +16,16 @@ function Tooted() {
   return (
     <div>
 
-      { tooted.map((toode,indeks) =>
+    { 
+      tooted.map((toode,indeks) =>
       <div key={indeks}>
         {toode}
         <button onClick={() => lisaOstukorvi(toode) } >Lisa ostukorvi</button>
-        </div> ) }
+        <Link to={"/yksik-toode/" + indeks} >
+          <button>Vaata detailsemalt!</button>
+        </Link>
+      </div> ) 
+    }
     
     </div>
 

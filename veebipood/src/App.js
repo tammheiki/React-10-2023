@@ -10,6 +10,10 @@ import Poed from './pages/Poed';
 import Seaded from './pages/Seaded';
 import Hinnad from './pages/Hinnad';
 import Tooted from './pages/Tooted';
+import MuudaToode from './pages/MuudaToode';
+import YksikPood from './pages/YksikPood';
+import YksikToode from './pages/YksikToode';
+import HaldaTooteid from './pages/HaldaTooteid';
 
 
 function App() {
@@ -60,6 +64,10 @@ function App() {
       <Link to="/tooted">
         <button className='nupu-stiil'>Tooted</button>
       </Link>
+
+      <Link to="/halda">
+        <button className='nupu-stiil'>Halda</button>
+      </Link>
       
      
       <Routes>
@@ -70,6 +78,11 @@ function App() {
       <Route path='seaded' element={ <Seaded />} />
       <Route path='hinnad' element={ <Hinnad />} />
       <Route path='tooted' element={ <Tooted />} />
+      <Route path='muuda-toode/:toote_jrknr' element={ <MuudaToode />} />
+      <Route path='yksik-pood/:poe_indeks' element={ <YksikPood />} />
+      <Route path='yksik-toode/:toote_indeks' element={ <YksikToode />} />
+      <Route path='halda' element={ <HaldaTooteid />} />
+      
       <Route path='*' element={ <MitteLeitud />} />
       </Routes>
   

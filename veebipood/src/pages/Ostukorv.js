@@ -32,11 +32,8 @@ function Ostukorv() {
 
     {ostukorv.length > 0 && <div> Kokku {ostukorv.lenght}Toodet(t)</div> }
     {ostukorv.length > 0 && <button onClick={tyhjenda} >Tühjenda</button> }   
-    {ostukorv.map((toode, indeks) => 
-    <div key={indeks}> 
-      {toode}  
-      <button onClick={ () => lisa (toode) }>Lisa</button> 
-      <button onClick={ () => kustuta(indeks)} >Kustuta</button>
+    {ostukorv.map((toode, indeks) => <div key={indeks}> {toode} <button onClick={ () => lisa (toode) }>Lisa</button> 
+    <button onClick={ () => kustuta(indeks)} >Kustuta</button>
     </div> ) }
       
         
