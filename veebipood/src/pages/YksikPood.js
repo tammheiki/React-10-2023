@@ -14,10 +14,10 @@ function YksikPood() {
 
   return (
     <div>
-      <div>järjekorranumber: {poe_indeks} __</div>
-      <div>Poed nimi:{leitudPood} </div>
-      <div>Telefon:__</div>
-      <div>Aadress:__</div>
+      <div>Järjekorranumber: {poe_indeks} </div>
+      <div>Poed nimi:{leitudPood.nimi} </div>
+      <div>Telefon:{leitudPood.tel}</div>
+      <div>Aadress:{leitudPood.aadr}</div>
 
     
     </div>

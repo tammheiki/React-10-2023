@@ -19,8 +19,13 @@ function Tooted() {
     { 
       tooted.map((toode,indeks) =>
       <div key={indeks}>
-        {toode}
-        <button onClick={() => lisaOstukorvi(toode) } >Lisa ostukorvi</button>
+         <img className='pilt' src={toode.pilt} alt="" />
+        <div>{toode.nimi}</div>
+        <div>{toode.hind} €</div>
+       
+        
+      
+      <button onClick={() => lisaOstukorvi(toode) } >Lisa ostukorvi</button>
         <Link to={"/yksik-toode/" + indeks} >
           <button>Vaata detailsemalt!</button>
         </Link>

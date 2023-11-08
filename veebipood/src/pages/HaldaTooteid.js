@@ -1,8 +1,39 @@
-import React from 'react'
+
+
+import { Link } from "react-router-dom"
+import tootedFailist from "../data/tooted.json"
+import { useState } from "react"
+
 
 function HaldaTooteid() {
+
+  const [halda, uuendaHalda] = useState (tootedFailist)
+
+  const kustuta = (jrknr) => {
+    halda.splice(jrknr,1)
+    uuendaHalda(halda.slice())
+
+  }
+
+
   return (
-    <div>HaldaTooteid</div>
+    <div>
+     
+      {halda.map((n2itatooteid, indeks) =>
+      <div key={indeks}>
+        <div>{n2itatooteid.nimi}</div> 
+       <div>{n2itatooteid.hind}</div>
+       <div>{n2itatooteid.pilt}</div>
+        <button onClick={() => kustuta(indeks) } >X</button>
+        <Link to={"/muuda-toode/" + indeks} >
+        <button>Muuda</button>
+        </Link>
+
+      </div> ) 
+    }
+     
+    
+    </div>
   )
 }
 

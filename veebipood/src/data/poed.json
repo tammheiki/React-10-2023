@@ -1,9 +1,15 @@
 [
-    "Ülemiste Keskus",
-    "Viimsi Kaubamaja",
-    "Rocca al Mare",
-    "Magistrali Mustamäe",
-    "Vesse",
-    "Kristiine Keskus",
-    "Järveotsa"
+    { "nimi": "Ülemiste Keskus", "aadr" : "Tulika 77", "tel": "12345" },
+    { "nimi": "Viimsi Kaubamaja", "aadr" : "Viimis 177", "tel": "1234521" },
+    { "nimi": "Rocca al Mare", "aadr" : "Mere 37", "tel": "12345323" },
+    { "nimi": "Magistrali Mustamäe", "aadr" : "Sõpruse 47", "tel": "85445" },
+    { "nimi": "Vesse", "aadr" : "Sõjamäe", "tel": "1264663" },
+    { "nimi": "Kristiine Keskus", "aadr" : "Endla 77", "tel": "12654345" },
+    { "nimi": "Järveotsa", "aadr" : "Järve 97", "tel": "12422243" }
+    
+    
+    
+   
+    
+    
 ]

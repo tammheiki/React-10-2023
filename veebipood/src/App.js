@@ -81,7 +81,7 @@ function App() {
       <Route path='muuda-toode/:toote_jrknr' element={ <MuudaToode />} />
       <Route path='yksik-pood/:poe_indeks' element={ <YksikPood />} />
       <Route path='yksik-toode/:toote_indeks' element={ <YksikToode />} />
-      <Route path='halda' element={ <HaldaTooteid />} />
+      <Route path='halda/'element={ <HaldaTooteid />} />
       
       <Route path='*' element={ <MitteLeitud />} />
       </Routes>

@@ -1,1 +1,6 @@
-["BMW", "Tesla", "Nobe"]
+[
+  { "nimi": "BMW", "hind" : 35000, "aktiivne": true, "pilt": "https://www.topgear.com/sites/default/files/2023/08/P90492179_highRes_bmw-i7-xdrive60-m-sp%20%281%29.jpg" },
+  { "nimi": "Tesla", "hind" : 45000, "aktiivne": true, "pilt":"https://images.prismic.io/carwow/c340a77d-af56-4562-abfb-bd5518ccb292_2023+Tesla+Model+X+front+quarter+moving.jpg" },
+  { "nimi": "Nobe", "hind" : 55000, "aktiivne": true, "pilt":"https://estonia.ee/wp-content/uploads/nobe_netist_4.jpg" }
+   
+]

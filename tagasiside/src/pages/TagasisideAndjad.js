@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import nimed from "../data/nimed.json"
 import { useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 function TagasisideAndjad() {
   const [andjad, uuendaAndjad] = useState(nimed)
@@ -49,10 +50,6 @@ function TagasisideAndjad() {
     uuendaAndjad(nimed.slice())
 
   }
-
-
-
-
 
 
 

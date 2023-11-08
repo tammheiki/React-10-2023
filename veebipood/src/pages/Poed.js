@@ -15,67 +15,67 @@ function Poed() {
   }
 
   const sorteeriAZ = () => {
-    poed.sort((a,b) => a.localeCompare(b))
+    poed.sort((a,b) => a.nimi.localeCompare(b.nimi))
     muudaPoed(poed.slice()); //slice kustutab ära mälukoha
    }
 
   const sorteeriZA =() => {
-    poed.sort((a,b) => b.localeCompare (a))
+    poed.sort((a,b) => b.nimi.localeCompare (a.nimi))
     muudaPoed(poed.slice());
   }
 
   const filtreeriEgaLoppevad = () => {
-    const vastus = poedFailist.filter(yksPood => yksPood.endsWith("e"))
+    const vastus = poedFailist.filter(yksPood => yksPood.nimi.endsWith("e"))
     muudaPoed(vastus);
 
   }
 
   const sorteeriTahedKasvavalt = () => {
-    poed.sort((a,b) => a.length - b.length ); //sorteerimiseks
+    poed.sort((a,b) => a.length - b.nimi.length ); //sorteerimiseks
     muudaPoed(poed.slice());//htmli muutmiseks
     
   }
 
   const sorteeriTahedKahanevalt = () => {
-    poed.sort((a,b) => b.length - a.length ); 
+    poed.sort((a,b) => b.length - a.nimi.length ); 
     muudaPoed(poed.slice());
     
   }
 
   const sorteeriKolmandaTaheJargi = () => {
-    poed.sort((a,b) => a[2].localeCompare (b[2]) ); 
+    poed.sort((a,b) => a.nimi[2].localeCompare (b.nimi[2]) ); 
     muudaPoed(poed.slice());
     
   }
 
   const filtreeriKesSisaldabIsLyhendit = () => {
-    const vastus = poedFailist.filter (yksPood => yksPood.includes("is"));
+    const vastus = poedFailist.filter (yksPood => yksPood.nimi.includes("is"));
     muudaPoed(vastus);
   }
 
   const sorteeriSonadeArvuJargi = () => {
-    poed.sort((a,b) => a.split(" ").lenght - b.split(" ").length ); 
+    poed.sort((a,b) => a.nimi.split(" ").lenght - b.nimi.split(" ").length ); 
     muudaPoed(poed.slice());
   }
     
 
   const filtreeriKellelOn9Tahte = () => {
-    const vastus = poedFailist.filter(yksPood => yksPood.length === 9)
+    const vastus = poedFailist.filter(yksPood => yksPood.nimi.length === 9)
     muudaPoed(vastus);
   }
 
   const filtreeriKellelOnVahemalt7Tahte = () => {
-    const vastus = poedFailist.filter(yksPood => yksPood.length >= 7)
+    const vastus = poedFailist.filter(yksPood => yksPood.nimi.length >= 7)
     muudaPoed(vastus);
   }
 
   const filtreeriKellelOnKolmasTahtI = () => {
-    const vastus = poedFailist.filter(yksPood => yksPood[2] === "i" )
+    const vastus = poedFailist.filter(yksPood => yksPood.nimi[2] === "i" )
     muudaPoed(vastus);
   }
 
   const filtreeriKellelOnRohkemKui1Sona = () => {
-    const vastus = poedFailist.filter(yksPood => yksPood.split (" ") > 1 )
+    const vastus = poedFailist.filter(yksPood => yksPood.nimi.split (" ") > 1 )
     muudaPoed(vastus);
   }
 
@@ -85,16 +85,17 @@ function Poed() {
 
   }
 
-  // const kustuta = (jrknr) => {
-  //   poed.splice(jrknr,1)
-  //   muudaPoed(poed.slice())
+  const kustuta = (jrknr) => {
+    poed.splice(jrknr,1)
+    muudaPoed(poed.slice())
        
-  // }
+  }
 
 
 
   return (
     <div>
+      <div> {poed.length} tk </div>
 
     <label> Pood </label> <br />
     <input ref={poodViide} type="text" /> <br />
@@ -120,8 +121,9 @@ function Poed() {
       </div>
 
       {poed.map((yksPood,index) => 
-      <div key={yksPood} className='pood'> 
-      {yksPood} 
+      <div key={yksPood.nimi} className='pood'> 
+      {yksPood.nimi} 
+      <button onClick={ () => kustuta (yksPood) }>X</button>
       
       <Link to={"/yksik-pood/" + index}>
         <button>Vaata detailsemalt</button>
