@@ -6,6 +6,8 @@ import Avaleht from './pages/Avaleht';
 import TagasisideAndjad from './pages/TagasisideAndjad';
 import Leiunurk from './pages/Leiunurk';
 import YksikTagasisideAndja from './pages/YksikTagasisideAndja';
+import Tegevused from './pages/Tegevused';
+import Kasutajad from './pages/Kasutajad';
 
 
 
@@ -29,6 +31,14 @@ function App() {
       <button>Leiunurk</button>
       </Link>
 
+      <Link to="/Tegevused" >
+      <button>Tegevused</button>
+      </Link>
+
+      <Link to="/Kasutajad" >
+      <button>Kasutajad</button>
+      </Link>
+
       
 
       <Routes>
@@ -37,6 +47,8 @@ function App() {
         <Route path='/TagasisideAndjad' element={ <TagasisideAndjad/> } /> 
         <Route path='/Leiunurk' element={ <Leiunurk/> } /> 
         <Route path='/Yksik-andja/:andja_index' exact element={ <YksikTagasisideAndja/> } />
+        <Route path='/Tegevused' element={ <Tegevused/> } /> 
+        <Route path='/Kasutajad' element={ <Kasutajad/> } /> 
          
       </Routes>
       

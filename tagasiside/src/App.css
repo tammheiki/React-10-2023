@@ -43,5 +43,15 @@
 
 }
 
+.kustutaja {
+
+  color: red;
+}
+
+.nupp {
+  color: rgb(66, 124, 200);
+  display: table-cell;
+}
+
 
 

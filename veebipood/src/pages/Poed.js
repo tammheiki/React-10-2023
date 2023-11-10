@@ -26,7 +26,7 @@ function Poed() {
 
   const filtreeriEgaLoppevad = () => {
     const vastus = poedFailist.filter(yksPood => yksPood.nimi.endsWith("e"))
-    muudaPoed(vastus);
+    muudaPoed(vastus.slice());
 
   }
 
