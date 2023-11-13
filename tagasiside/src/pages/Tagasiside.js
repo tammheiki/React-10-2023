@@ -17,7 +17,7 @@ function Tagasiside() {
         m22ratagasisided(tagasisided.slice())
 
     }
-
+    
 
 
   return ( 
@@ -31,6 +31,7 @@ function Tagasiside() {
     <input ref={tagasisideRef} type='text' ></input>
 
     <button onClick={lisaUusTagasiside}>Lisa</button>
+    
 
     {tagasisided.map((feedback, index) => <div key={feedback} > {feedback} <button  onClick={ () => kustuta (index) }>X</button>
     

@@ -91,10 +91,17 @@ function Poed() {
        
   }
 
+  const arvutaTahedKokku = () => {
+    let summa = 0;
+    poed.forEach(ykspood => summa = summa + ykspood.nimi.length)
+    return summa
+  }
+
 
 
   return (
     <div>
+      <div> {arvutaTahedKokku ()} </div>
       <div> {poed.length} tk </div>
 
     <label> Pood </label> <br />

@@ -1,17 +1,5 @@
 .App {
   text-align: center;
-  display: inline-block;
-  padding: 12px 24px;
-  font-size: 18px;
-  text-align: center;
-  text-decoration: black;
-  cursor: pointer;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(to right, #4facfe, #00f2fe);
-  color: #000000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: 0.3s ease-in-out;
 }
 
 .App-logo {
@@ -48,23 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.eiLeitud{
- 
-  width: 150px;
-
-}
-
-.kustutaja {
-
-  background-color: #f39c12;
-  color: #fff;
-}
-
-.nupp {
-  background-color: #2ecc71;
-  color: #000000;
-}
-
-
-

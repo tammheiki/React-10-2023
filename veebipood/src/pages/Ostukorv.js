@@ -24,6 +24,14 @@ function Ostukorv() {
        
   }
 
+  const arvutaKogusumma = () => {
+    let summa = 0;
+    ostukorv.forEach(toode => summa = summa + toode.hind)
+    return summa;
+  }
+
+
+
 
   return (
     <div>
@@ -49,7 +57,10 @@ function Ostukorv() {
    </Link>
       { ostukorv.lenght === 0 &&  <div>ostukorv on tühi</div>}
       <button>Lisa mõni toode toode</button>
+
+      <div>{arvutaKogusumma ()} € </div>
     </div>
+    
   )
 }
 

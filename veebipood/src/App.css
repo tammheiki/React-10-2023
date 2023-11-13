@@ -20,7 +20,7 @@
 
 .pilt {
   width: 150px;
-  /* height:100px; */
+  height:100px;
 
 }
 
@@ -34,6 +34,8 @@
   border-radius: 10px;
   
 }
+
+
 
 .kuldne{
   color: goldenrod;
@@ -85,6 +87,35 @@
   background-color: rgb(69, 160, 152); 
   opacity: 0.7;
   border-radius: 10px;
+}
+
+.pilt-mitteaktiivne {
+  width: 150px;
+  filter: grayscale(100%);
+  opacity: 0,5;
+
+}
+
+
+
+.aktiivne-toode{
+  background-color: rgb(224, 234, 224);
+  border: 1px solid green; 
+  width: 150px;
+  
+}
+
+.mitteaktiivne-toode{
+  background-color: rgb(244, 233, 233);
+  border: 1px solid red; 
+  width: 150px;
+  
+}
+
+.pilt2 {
+  width: 150px;
+  height:100px;
+
 }
 
 
