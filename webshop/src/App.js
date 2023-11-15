@@ -16,21 +16,26 @@ import Signup from "./pages/auth/Signup";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-
-// Favicon
-// Rakenduse tabi nimi muuta --- public/index-- title
-// Font muuta
-// Not Found leht tekitada
-// Firebase-i üles panna täpselt samamoodi nagu me varasemalt teinud oleme
-
-
-
+import NotFound from "./pages/global/NotFound";
+import { useTranslation } from 'react-i18next';
 
 
 
 
 function App() {
+  const { t, i18n } = useTranslation();
+
+  const changeLangEn = () => {
+    i18n.changeLanguage("en");
+    localStorage.setItem("language", "en")
+  }
+
+  const changeLangEe = () => {
+    i18n.changeLanguage("ee");
+    localStorage.setItem("language", "ee")
+  }
+
+
   return (
 
   <div className="App">
@@ -38,23 +43,23 @@ function App() {
 
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/">Webshop</Navbar.Brand>
+            <img className="lang" src="/estonian.png" onClick={changeLangEe} alt="" />
+            <img className="lang" src="/english.png" onClick={changeLangEn} alt="" />
+            <Nav.Link as={Link} to="auth/login">{t("nav.login")}</Nav.Link>
+            <Nav.Link as={Link} to="auth/signup">{t("nav.signup")}</Nav.Link>
+
+
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
+              
+              <Nav.Link as={Link} to="/admin/home">{t("nav.admin")}</Nav.Link>
+              <Nav.Link as={Link} to="/shops">{t("nav.shops")}</Nav.Link>
+              <Nav.Link as={Link} to="/contact">{t("nav.contact")}</Nav.Link>
+              <Nav.Link as={Link} to="/cart">{t("nav.cart")}</Nav.Link>
+
+             
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -66,17 +71,18 @@ function App() {
       <Routes>
         <Route path="/" element= {<HomePage/>} />
         <Route path="/Cart" element= {<Cart/>} />
-        <Route path="/ContactUs" element= {<ContactUs/>} />
+        <Route path="/Contact" element= {<ContactUs/>} />
         <Route path="/Shops" element= {<Shops/>} />
-        <Route path="/SingleProduct" element= {<SingleProduct/>} />
+        <Route path="/Product" element= {<SingleProduct/>} />
         <Route path="/admin/add" element= {<AddProduct/>} />
         <Route path="/admin/home" element= {<AdminHome/>} />
         <Route path="/admin/edit" element= {<EditProduct/>} />
         <Route path="/admin/maintain" element= {<MaintainCategories/>} />
-        <Route path="/admin/maintain-product" element= {<MaintainProducts/>} />
+        <Route path="/admin/products" element= {<MaintainProducts/>} />
         <Route path="/admin/shop" element= {<MaintainShops/>} />
         <Route path="/auth/login" element= {<Login/>} />
         <Route path="/auth/signup" element= {<Signup/>} />
+        <Route path="*" element= {<NotFound/>} />
       </Routes>
     
     </div>
@@ -84,3 +90,9 @@ function App() {
 }
 
 export default App;
+
+
+
+// 1. Tõlkige Login ja Signup labelid ja buttonid
+// 2. Lisage 3-4 keel Webshopi projekti --> i18n.js on vaja tekitada tõlked ja uued nupud navbari
+// 3. Pange "Uudised" projektile peale ka tõlge ja Bootstrap
