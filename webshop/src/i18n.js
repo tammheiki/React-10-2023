@@ -8,7 +8,7 @@ const resources = {
   en: {
     translation: {
       "admin.shops": "Edit shops",
-      "admin.categoriess":"Edit categories",
+      "admin.categories":"Edit categories",
       "admin.add-product": "Add new product",
       "admin.edit-delete-product": "Edit/delete product",
       "nav.admin" :"Edit shops",
@@ -16,7 +16,14 @@ const resources = {
       "nav.contact" : "Contact us",
       "nav.cart" : "Cart",
       "nav.login" : "Login",
-      "nav.signup" : "Signup"
+      "nav.signup" : "Signup",
+      "nav.homepage" : "Homepage",
+      "email": "E-mail",
+      "password": "Password",
+      "login": "Log in",
+      "registreeru" : "Signup"
+
+     
 
     }
   },
@@ -32,8 +39,66 @@ const resources = {
       "nav.cart" : "Ostukorv",
       "nav.login" : "Logi sisse",
       "nav.signup" : "Registreeru",
+      "nav.homepage" : "Avaleht",
+      "email" : "E-post",
+      "password": "Parool",
+      "login": "Logi sisse",
+      "registreeru" : "Registreeru"
+      
+      
+
+      
     }
-  }
+  },
+
+  es: {
+    translation: {
+      "admin.shops": "Cambiar de tienda",
+      "admin.categories": "Cambiar categorías",
+      "admin.add-product": "Agregar producto",
+      "admin.edit-delete-product": "Cambiar/eliminar producto",
+      "nav.admin" :"A la vista de administrador",
+      "nav.shops" : "Nuestra tienda",
+      "nav.contact" : "Contacto",
+      "nav.cart" : "Carro de la compra",
+      "nav.login" : "Acceso",
+      "nav.signup" : "Inscribirse",
+      "nav.homepage" : "Pagina de inicio",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "login": "Iniciar sesión",
+      "registreeru" : "Inscribirse"
+      
+      
+
+      
+    }
+  },
+
+  no: {
+    translation: {
+      "admin.shops": "Bytt butikk",
+      "admin.categories": "Endre kategorier",
+      "admin.add-product": "Legg til produkt",
+      "admin.edit-delete-product": "Endre/slette produkt",
+      "nav.admin" :"Til Admin-visningen",
+      "nav.shops" : "Butikken vår",
+      "nav.contact" : "Kontakt",
+      "nav.cart" : "Handlevogn",
+      "nav.login" : "Logg Inn",
+      "nav.signup" : "Melde deg på",
+      "nav.homepage" : "Hjemmeside",
+      "email": "E-post",
+      "password": "Passord",
+      "login": "Logg inn",
+      "registreeru" : "Melde deg på"
+
+     
+    }
+  },
+
+
+
 };
 
 i18n

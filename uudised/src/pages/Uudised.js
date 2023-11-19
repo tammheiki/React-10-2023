@@ -1,11 +1,19 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
+
 
 
 
 function Uudised() {
+  const { t, } = useTranslation();
+
+
   return ( <div>
     <br />
-    <div>Ühtegi uudist hetkel pole, Lisame õige pea!</div>
+
+    <h3>{t("uudist pole")}</h3>
+
+
  </div> );
 }
 

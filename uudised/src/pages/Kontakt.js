@@ -1,14 +1,18 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next';
 
 
 function Kontakt() {
+  const { t, } = useTranslation();
+
+
 const [n2itaTelKristiine, muudaN2itaTelKristiine] = useState(false);
 const [n2itaTelYlemiste, muudaN2itaYlemiste] = useState(true);
 const [n2itaTelTasku, muudaN2itaTasku] = useState(true);
 
   return ( <div>
     <br />
-    <div>Võta meiega ühendust:</div>
+    <div>{t("võta-ühendust")}:</div>
     <br />
     <button onClick={() => muudaN2itaTelKristiine  (!n2itaTelKristiine)}>Kristiine Keskus</button>
     {n2itaTelKristiine && <div>+372111111</div>}

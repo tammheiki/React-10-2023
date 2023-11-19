@@ -35,6 +35,38 @@
     font-weight: bold;
   }
 
+  .lang {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .lang:hover {
+    opacity: 70%;
+    cursor: pointer;
+  }
+  
+  .lang:active{
+    padding: 12px;
+  }
+
+  .bg-body-tertiary {
+    background-color: rgba(250, 236, 129, 0.963) !important; ;
+  }
+
+  .uudisepilt {
+    max-width: 300px;
+    max-height: 40px;
+    height: 100%;
+    width: auto;
+    content: var(--logo-light);
+    opacity: 0.7;
+    padding-left: 2px;
+    border-radius: 15px;
+ 
+}
+
+
+
 
 
   

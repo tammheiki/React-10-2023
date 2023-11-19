@@ -35,6 +35,16 @@ function App() {
     localStorage.setItem("language", "ee")
   }
 
+  const changeLangEs = () => {
+    i18n.changeLanguage("es");
+    localStorage.setItem("language", "es")
+  }
+
+  const changeLangNo = () => {
+    i18n.changeLanguage("no");
+    localStorage.setItem("language", "no")
+  }
+
 
   return (
 
@@ -46,28 +56,23 @@ function App() {
           <Navbar.Brand as={Link} to="/">Webshop</Navbar.Brand>
             <img className="lang" src="/estonian.png" onClick={changeLangEe} alt="" />
             <img className="lang" src="/english.png" onClick={changeLangEn} alt="" />
+            <img className="lang" src="/spanish.png" onClick={changeLangEs} alt="" />
+            <img className="lang" src="/norsk.png" onClick={changeLangNo} alt="" />
             <Nav.Link as={Link} to="auth/login">{t("nav.login")}</Nav.Link>
             <Nav.Link as={Link} to="auth/signup">{t("nav.signup")}</Nav.Link>
-
-
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              
               <Nav.Link as={Link} to="/admin/home">{t("nav.admin")}</Nav.Link>
               <Nav.Link as={Link} to="/shops">{t("nav.shops")}</Nav.Link>
               <Nav.Link as={Link} to="/contact">{t("nav.contact")}</Nav.Link>
               <Nav.Link as={Link} to="/cart">{t("nav.cart")}</Nav.Link>
-
-             
+              <Nav.Link as={Link} to="/">{t("nav.homepage")}</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
-
-      <Link></Link>
-
+      
       <Routes>
         <Route path="/" element= {<HomePage/>} />
         <Route path="/Cart" element= {<Cart/>} />

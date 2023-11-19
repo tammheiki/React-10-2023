@@ -6,42 +6,79 @@ import Uudised from './pages/Uudised';
 import Kontakt from './pages/Kontakt';
 import Meist from './pages/Meist';
 import Ostukorv from './pages/Ostukorv';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Mitteleitud from './pages/Mitteleitud';
+import { useTranslation } from 'react-i18next';
+
+
+
 
 function App() {
+    const { t, i18n } = useTranslation();
+
+  const changeLangEn = () => {
+    i18n.changeLanguage("en");
+    localStorage.setItem("language", "en")
+  }
+
+  const changeLangEe = () => {
+    i18n.changeLanguage("ee");
+    localStorage.setItem("language", "ee")
+  }
+
+  const changeLangEs = () => {
+    i18n.changeLanguage("es");
+    localStorage.setItem("language", "es")
+  }
+
+
   return (
 
     <div className="App">
-      
 
-      <Link to="/">
-      <button>Avaleht</button>
-  {/* { <img className="pilt" src="https://cdn.tasteatlas.com/images/regions/9b6037559326448ea3551c187a13f202.jpg?m=facebook" alt="" /> } */}
-      </Link>
-      
-      <Link to="/Uudised">
-      <button>Uudised</button>
-      </Link>
+      <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+      <Container>
 
-      <Link to="/Kontakt">
-      <button>Kontakt</button>
-      </Link>
+        <Navbar.Brand as={Link} to="/" >{t("eesti uudised")} <img className='uudisepilt' src="https://uueduudised.ee/wp-content/uploads/2023/08/uu-logo.png" alt="" /> </Navbar.Brand>
+        <img className="lang" src="/english.png" onClick={changeLangEn} alt="" />
+        <img className="lang" src="/estonia.png" onClick={changeLangEe} alt="" />
+        <img className="lang" src="/spanish.png" onClick={changeLangEs} alt="" />
 
-      <Link to="/Meist">
-      <button>Info Meist</button>
-      </Link>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            
+          <Nav.Link as={Link} to="/uudised" >{t("uudised")}</Nav.Link>
+          <Nav.Link as={Link} to="/kontakt" >{t("kontakt")}</Nav.Link>
+          <Nav.Link as={Link} to="/meist" >{t("meist")}</Nav.Link>
+          <Nav.Link as={Link} to="/Ostukorv" >{t("ostukorv")}</Nav.Link>
+          
+          
+          </Nav>
+          <Nav>
+            <Nav.Link href="#deets">More deets</Nav.Link>
+            <Nav.Link eventKey={2} href="#memes">
+              Dank memes
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
 
-      <Link to="/Ostukorv">
-      <button>Ostukorv</button>
-      </Link>
-      
       
       <Routes>
         < Route path="" element={<Avaleht />} />
-        < Route path="Uudised" element={<Uudised />} />
+        < Route path="uudised" element={<Uudised />} />
         < Route path="kontakt" element={<Kontakt />} />
         < Route path="meist" element={<Meist />} />
         < Route path="ostukorv" element={<Ostukorv/>} />
+        < Route path="*" element={<Mitteleitud />} />
+
         </Routes>
+
+        
         
     </div>
   )

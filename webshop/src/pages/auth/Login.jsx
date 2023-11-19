@@ -1,15 +1,26 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
+
+
+
 
 function Login() {
+  const { t, } = useTranslation();
+ 
   return (
     <div>
 
-      <label>E-mail</label> <br />
+      <label>{t('email')}</label> <br />
       <input type="text" /> <br />
-      <label>Password</label> <br />
+      <label>{t('password')}</label> <br />
       <input type="text" /> <br />
-      <button>Logi sisse</button>
+      <button>{t('login')}</button>
+     
+      
+      
 
+     
+      
 
     </div>
   )
