@@ -22,8 +22,8 @@ function HaldaTooteid() {
       {halda.map((n2itatooteid, indeks) =>
       <div key={indeks} className={ n2itatooteid.aktiivne === true ? "aktiivne-toode" : "mitteaktiivne"} >
         <div>{n2itatooteid.nimi}</div> 
-       <div>{n2itatooteid.hind}</div>
-       <div>{n2itatooteid.pilt}</div>
+        <div>{n2itatooteid.hind}</div>
+        <div>{n2itatooteid.pilt}</div>
         <button onClick={() => kustuta(indeks) } >X</button>
         <Link to={"/muuda-toode/" + indeks} >
         <button>Muuda</button>

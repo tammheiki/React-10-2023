@@ -11,7 +11,7 @@ function AdminHome() {
       <Button as={Link} to="/admin/home" variant="primary">{t("admin.shops")}</Button>{' '}
       <Button as={Link} to="/admin/maintain" variant="secondary">{t("admin.categories")}</Button>{' '}
       <Button as={Link} to="/admin/add" variant="success">{t("admin.add-product")}</Button>{' '}
-      <Button as={Link} to="/admin/edit" variant="warning">{t("admin.edit-delete-product")}</Button>{' '}
+      <Button as={Link} to="/admin/products" variant="warning">{t("admin.edit-delete-product")}</Button>{' '}
       
     </div>
   )

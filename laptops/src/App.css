@@ -43,3 +43,13 @@
   font-size: 40px;
   font-weight: bold;
 }
+
+.arvuti{
+  height: 100px;
+  margin-top: 50px;
+  display: list-item;
+  margin-right: 10px;
+ 
+  
+
+}

@@ -2,7 +2,7 @@ import { Link, Routes, Route } from "react-router-dom";
 import './App.css';
 import HomePage from "./pages/global/HomePage";
 import Cart from "./pages/global/Cart";
-import ContactUs from "./pages/global/ContactUs";
+import { ContactUs } from "./pages/global/ContactUs";
 import Shops from "./pages/global/Shops";
 import SingleProduct from "./pages/global/SingleProduct";
 import AddProduct from "./pages/admin/AddProduct";
@@ -27,22 +27,22 @@ function App() {
 
   const changeLangEn = () => {
     i18n.changeLanguage("en");
-    localStorage.setItem("language", "en")
+    localStorage.setItem("language", "en");
   }
 
   const changeLangEe = () => {
     i18n.changeLanguage("ee");
-    localStorage.setItem("language", "ee")
+    localStorage.setItem("language", "ee");
   }
 
   const changeLangEs = () => {
     i18n.changeLanguage("es");
-    localStorage.setItem("language", "es")
+    localStorage.setItem("language", "es");
   }
 
   const changeLangNo = () => {
     i18n.changeLanguage("no");
-    localStorage.setItem("language", "no")
+    localStorage.setItem("language", "no");
   }
 
 
@@ -53,7 +53,7 @@ function App() {
 
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand as={Link} to="/">Webshop</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/">{t("webshop")}</Navbar.Brand>
             <img className="lang" src="/estonian.png" onClick={changeLangEe} alt="" />
             <img className="lang" src="/english.png" onClick={changeLangEn} alt="" />
             <img className="lang" src="/spanish.png" onClick={changeLangEs} alt="" />
@@ -75,18 +75,18 @@ function App() {
       
       <Routes>
         <Route path="/" element= {<HomePage/>} />
-        <Route path="/Cart" element= {<Cart/>} />
-        <Route path="/Contact" element= {<ContactUs/>} />
-        <Route path="/Shops" element= {<Shops/>} />
-        <Route path="/Product" element= {<SingleProduct/>} />
-        <Route path="/admin/add" element= {<AddProduct/>} />
-        <Route path="/admin/home" element= {<AdminHome/>} />
-        <Route path="/admin/edit" element= {<EditProduct/>} />
-        <Route path="/admin/maintain" element= {<MaintainCategories/>} />
-        <Route path="/admin/products" element= {<MaintainProducts/>} />
-        <Route path="/admin/shop" element= {<MaintainShops/>} />
-        <Route path="/auth/login" element= {<Login/>} />
-        <Route path="/auth/signup" element= {<Signup/>} />
+        <Route path="Cart" element= {<Cart/>} />
+        <Route path="Contact" element= {<ContactUs/>} />
+        <Route path="Shops" element= {<Shops/>} />
+        <Route path="product/:single_product" element= {<SingleProduct/>} />
+        <Route path="admin/add" element= {<AddProduct/>} />
+        <Route path="admin/home" element= {<AdminHome/>} />
+        <Route path="admin/edit/:product_id" element= {<EditProduct/>} />
+        <Route path="admin/maintain" element= {<MaintainCategories/>} />
+        <Route path="admin/products" element= {<MaintainProducts/>} />
+        <Route path="admin/shop" element= {<MaintainShops/>} />
+        <Route path="auth/login" element= {<Login/>} />
+        <Route path="auth/signup" element= {<Signup/>} />
         <Route path="*" element= {<NotFound/>} />
       </Routes>
     
@@ -98,6 +98,3 @@ export default App;
 
 
 
-// 1. Tõlkige Login ja Signup labelid ja buttonid
-// 2. Lisage 3-4 keel Webshopi projekti --> i18n.js on vaja tekitada tõlked ja uued nupud navbari
-// 3. Pange "Uudised" projektile peale ka tõlge ja Bootstrap

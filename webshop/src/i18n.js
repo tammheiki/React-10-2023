@@ -1,9 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-// the translations
-// (tip move them in a JSON file and import them,
-// or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
 const resources = {
   en: {
     translation: {
@@ -21,9 +18,8 @@ const resources = {
       "email": "E-mail",
       "password": "Password",
       "login": "Log in",
-      "registreeru" : "Signup"
-
-     
+      "registreeru" : "Signup",
+      "webshop" : "Webshop"
 
     }
   },
@@ -43,11 +39,9 @@ const resources = {
       "email" : "E-post",
       "password": "Parool",
       "login": "Logi sisse",
-      "registreeru" : "Registreeru"
-      
-      
-
-      
+      "registreeru" : "Registreeru",
+      "webshop" : "Veebipood"
+    
     }
   },
 
@@ -67,10 +61,8 @@ const resources = {
       "email": "Correo electrónico",
       "password": "Contraseña",
       "login": "Iniciar sesión",
-      "registreeru" : "Inscribirse"
-      
-      
-
+      "registreeru" : "Inscribirse",
+      "webshop" : "Tienda en línea"
       
     }
   },
@@ -91,9 +83,9 @@ const resources = {
       "email": "E-post",
       "password": "Passord",
       "login": "Logg inn",
-      "registreeru" : "Melde deg på"
+      "registreeru" : "Melde deg på",
+      "webshop" : "Online-butikk"
 
-     
     }
   },
 

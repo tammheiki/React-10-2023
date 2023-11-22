@@ -1,0 +1,6 @@
+[
+    { "nimi": "Dell", "hind" : 350, "aktiivne": true, "pilt": "https://ksd-images.lt/display/onea_ee/uploads/ca/119/699dcfb5.jpg" },
+    { "nimi": "Samsung", "hind" : 450, "aktiivne": true, "pilt":"https://ksd-images.lt/display/aikido/store/5a09e9bbb8fbd34a421a01732d6b7806.jpg" },
+    { "nimi": "Macbook", "hind" : 550, "aktiivne": true, "pilt":"https://ee2.pigugroup.eu/colours/150/195/84/15019584/lg-sulearvuti-e397f-osta_reference.jpg" }
+     
+  ]

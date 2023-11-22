@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import {Link} from "react-router-dom"
 
 function LisaArvuti() {
     const [message, setMessage] = useState("Lisa arvuti!");
@@ -20,8 +21,10 @@ function LisaArvuti() {
 <input type='text' /> <br />
 <label>Maksumus</label> <br />
 <input type='number' /> <br />
-{n2itaNuppu === true && <button onClick={()=> addProduct () }>Sisesta</button>}
 
+<Link to={"/ostukorv"}>
+{n2itaNuppu === true && <button onClick={()=> addProduct () }>Sisesta</button>}
+</Link>
 
 
     </div>
