@@ -54,20 +54,22 @@ function App() {
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
           <Navbar.Brand as={Link} to="/">{t("webshop")}</Navbar.Brand>
-            <img className="lang" src="/estonian.png" onClick={changeLangEe} alt="" />
-            <img className="lang" src="/english.png" onClick={changeLangEn} alt="" />
-            <img className="lang" src="/spanish.png" onClick={changeLangEs} alt="" />
-            <img className="lang" src="/norsk.png" onClick={changeLangNo} alt="" />
-            <Nav.Link as={Link} to="auth/login">{t("nav.login")}</Nav.Link>
-            <Nav.Link as={Link} to="auth/signup">{t("nav.signup")}</Nav.Link>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link as={Link} to="/admin/home">{t("nav.admin")}</Nav.Link>
-              <Nav.Link as={Link} to="/shops">{t("nav.shops")}</Nav.Link>
-              <Nav.Link as={Link} to="/contact">{t("nav.contact")}</Nav.Link>
-              <Nav.Link as={Link} to="/cart">{t("nav.cart")}</Nav.Link>
               <Nav.Link as={Link} to="/">{t("nav.homepage")}</Nav.Link>
+              <Nav.Link as={Link} to="/admin/home">{t("nav.admin")}</Nav.Link>
+              <Nav.Link as={Link} to="/contact">{t("nav.contact")}</Nav.Link>
+              <Nav.Link as={Link} to="/shops">{t("nav.shops")}</Nav.Link>
+              <Nav.Link as={Link} to="/cart">{t("nav.cart")}</Nav.Link>
+            </Nav>
+              <img className="lang" src="/estonian.png" onClick={changeLangEe} alt="" />
+              <img className="lang" src="/english.png" onClick={changeLangEn} alt="" />
+              <img className="lang" src="/spanish.png" onClick={changeLangEs} alt="" />
+              <img className="lang" src="/norsk.png" onClick={changeLangNo} alt="" />
+            <Nav>
+              <Nav.Link as={Link} to="auth/login">{t("nav.login")}</Nav.Link> 
+              <Nav.Link as={Link} to="auth/signup">{t("nav.signup")}</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

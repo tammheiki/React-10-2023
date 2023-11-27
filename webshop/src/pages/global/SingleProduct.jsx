@@ -70,6 +70,9 @@ if ( found === undefined) {
 export default SingleProduct
 
 
+//// label ja inputi pole vaja -  lihtsalt toote andmed, mida välja kuvada
+
+
 // 1. Suunake HomePage lehelt SingleProduct URL-le, saates kaasa ID
 // 2. App.js sees võimaldage panna ID URLi sisse
 // 3. SingleProductis võtke selle saadetud ID

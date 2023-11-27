@@ -93,6 +93,7 @@
   width: 150px;
   filter: grayscale(100%);
   opacity: 0,5;
+  height:100px;
 
 }
 
@@ -102,6 +103,7 @@
   background-color: rgb(224, 234, 224);
   border: 1px solid green; 
   width: 150px;
+  height:100px;
   
 }
 
@@ -109,10 +111,17 @@
   background-color: rgb(244, 233, 233);
   border: 1px solid red; 
   width: 150px;
+  height:100px;
   
 }
 
 .pilt2 {
+  width: 150px;
+  height:100px;
+
+}
+
+.toode.pilt{
   width: 150px;
   height:100px;
 

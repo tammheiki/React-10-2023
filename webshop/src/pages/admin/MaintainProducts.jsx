@@ -33,7 +33,7 @@ const searchFromProducts = () =>{
       <input ref={searchRef} onChange={searchFromProducts} type="text" />
 
       {products.map((product, index )=>  
-      <div key={product.id} className={product.active ? "active" : " inactive"}>
+      <div key={product.id} className={product.active ? "active" : "inactive"}>
         
         <img src={product.image} alt="" />
         <div> {product.id} </div>

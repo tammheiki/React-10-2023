@@ -67,7 +67,7 @@ function Tooted() {
     { 
       tooted.map((toode,indeks) =>
       <div key={indeks}>
-         <img className={ toode.pilt === true ?  "pilt" : "pilt-mitte-aktiivne"} src={toode.pilt} alt="" />
+        <img className={"pilt"} src={toode.pilt} alt="" />
         <div>{toode.nimi}</div>
         <div>{toode.hind} €</div>
        

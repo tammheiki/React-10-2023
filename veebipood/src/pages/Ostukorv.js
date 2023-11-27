@@ -38,7 +38,7 @@ function Ostukorv() {
 
     <div>Kokku {ostukorv.length} toode(t) </div>
 
-    {ostukorv.length > 0 && <div> Kokku {ostukorv.lenght}Toodet(t)</div> }
+    {ostukorv.length > 0 && <div> Kokku {ostukorv.length}Toodet(t)</div> }
     {ostukorv.length > 0 && <button onClick={tyhjenda} >Tühjenda</button> }
 
     {ostukorv.map((toode, indeks) => 

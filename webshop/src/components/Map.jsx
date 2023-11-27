@@ -39,6 +39,16 @@ let DefaultIcon = L.icon({
             Tasku keskus. <br /> Avatud 10-21
           </Popup>
         </Marker>
+        <Marker position={[58.3865, 24.5030]}>
+          <Popup>
+            Port artur. <br /> Avatud 10-21
+          </Popup>
+        </Marker>
+        <Marker position={[60.1685, 24.9422]}>
+          <Popup>
+            Stockmann helsingi. <br /> Avatud 10-21
+          </Popup>
+        </Marker>
       </MapContainer>
     </div>)
   }
